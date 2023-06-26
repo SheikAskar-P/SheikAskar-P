@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+    <head>
+        <title> Music Website</title>
+        <link rel="stylesheet" href="so1.css">
+    </head>
+    <body>
+       <div class="hero">
+        <div class="navbar">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnPpKKtPh_0lDGSprWMhSNnz0dLLhfF26nPs7YLAf9qd0DU35Grkjg6I4insBJQRHDHB8&usqp=CAU" class="logo">
+            <ul>
+                <li><a href="a"> HOME</a></li>
+                <li><a href="a"> ABOUT</a></li>
+                <li><a href="a"> NEW SONG </a></li>
+                <li><a href="a"> ALBUM</a></li>
+                <li><a href="a"> CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left">
+                <h1>THE<br> REAL<br> MUSIC</h1>
+            </div>
+            <div class="right">
+                <p>Click To Play</p>
+                <img src="https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_play_circle_filled_white_48px-512.png" id="icon">
+            </div>
+        </div>
+       </div>
+
+       <audio id="mysong">
+        <source src="WhatsApp Audio 2023-02-18 at 7.19.53 PM.mpeg" type="audio/mp3">
+       </audio>
+
+       <script> 
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.play();
+                icon.scr = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvKJwb1_-o8Co_sHl_7rDKPDMqXW7nl0joYNnqgJzhHQ&s";
+            }else{
+                mysong.pause();
+                icon.src = "WhatsApp Audio 2023-02-18 at 7.19.53 PM.mpeg";
+            }
+
+            
+        }
+       </script>
+    </body>
+</html>
